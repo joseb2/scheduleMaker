@@ -42,6 +42,6 @@ public class Main {
 ////        for (Element title : titles) {
 ////            System.out.println(text);
 //
-//        return text;
+        return text;
 //    }
 }
