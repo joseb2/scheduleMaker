@@ -18,15 +18,29 @@ public class Main {
                 .get();
 
 
+        lingDoc.outputSettings().prettyPrint(false);
         Elements lingCourses = lingDoc.select("div.courses");
+
         // course class = courseblock
-        String text = lingCourses.text();
+        String newLine = "\n";
+        String text = "";
+        int firstIndex = 0;
+        int lastIndex = 0;
+        String[] textArray = new String[lastIndex];
 
         for (Element lingCourse : lingCourses) {
+            text = lingCourse.wholeText();
             // the new Element of lingCourse (= 0) in an array of lingCourses (lines))
-            System.out.println(text.replace(" ","\n"));
-        }
+            for ( int i = 0 ; i < text.length(); i++) {
+                if (text.contains(newLine)) {
+                    firstIndex = text.indexOf("newLine");
+                    i++;
+                    if (text.contains(newLine) && text.indexOf(newLine) > firstIndex) {
 
+
+                }
+            }
+        }
     }
 
 //    public String elementCollector() throws Exception{
